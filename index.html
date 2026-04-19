@@ -67,12 +67,28 @@
   .cover .sub{text-align:center;margin:1.5rem auto 0;max-width:46ch;color:var(--gray);font-weight:500}
   .cover .accent{margin:1rem auto 0}
 
+  .downloads{
+    display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;
+  }
+  .dl-btn{
+    padding:.8rem 1.4rem;border:1px solid var(--ink);
+    font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;
+    text-decoration:none;color:var(--ink);transition:.2s;display:inline-flex;gap:.5rem;align-items:center;
+  }
+  .dl-btn:hover{background:var(--ink);color:#fff}
+  .dl-btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .dl-btn.primary:hover{background:var(--ink);border-color:var(--ink)}
+
   .grid2{display:grid;grid-template-columns:1fr;gap:2.5rem;margin-top:2rem}
   @media(min-width:900px){.grid2{grid-template-columns:1.05fr .95fr;gap:4rem}}
 
   .grid3{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2.5rem}
   @media(min-width:700px){.grid3{grid-template-columns:1fr 1fr}}
   @media(min-width:1100px){.grid3{grid-template-columns:1fr 1fr 1fr}}
+
+  .grid4{display:grid;grid-template-columns:1fr;gap:.75rem;margin-top:2.5rem}
+  @media(min-width:700px){.grid4{grid-template-columns:1fr 1fr}}
+  @media(min-width:1100px){.grid4{grid-template-columns:repeat(4,1fr)}}
 
   .card{
     padding:1.75rem;
@@ -85,6 +101,10 @@
   .slide.dark .card h3{color:var(--blue)}
   .slide.blue .card h3{color:#fff}
   .card p{font-size:.98rem;line-height:1.5;opacity:.88;font-weight:400}
+
+  .card.compact{padding:1.25rem}
+  .card.compact h3{font-size:1.25rem;margin-bottom:.3rem}
+  .card.compact p{font-size:.9rem;line-height:1.45}
 
   .list{list-style:none;padding:0;margin:1.25rem 0 0}
   .list li{padding:.7rem 0;border-bottom:1px solid var(--line);font-weight:500;font-size:1.05rem;display:flex;gap:.75rem;align-items:baseline}
@@ -134,6 +154,17 @@
   .gest h5{font-weight:900;font-size:1rem;color:var(--blue);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.3rem}
   .gest p{font-size:.82rem;opacity:.78;line-height:1.4}
 
+  /* pack before/after */
+  .pack-ba{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
+  @media(min-width:800px){.pack-ba{grid-template-columns:1fr 1fr}}
+  .pack-ba .box{padding:1.75rem}
+  .pack-ba .before{background:#e8e8e8;color:#333}
+  .pack-ba .after{background:var(--blue);color:#fff}
+  .pack-ba .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.15em;font-size:.75rem;opacity:.75;margin-bottom:.8rem;display:block}
+  .pack-ba h4{font-weight:900;font-size:2.2rem;text-transform:uppercase;line-height:.95;margin-bottom:1rem}
+  .pack-ba p{font-size:.95rem;line-height:1.5;opacity:.9}
+  .pack-bottom{margin-top:1.5rem;padding:1rem 1.5rem;background:var(--ink);color:#fff;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;text-align:center}
+
   .lockup{text-align:center;margin:auto 0;padding-block:4rem}
   .lockup .m{font-size:clamp(4rem,15vw,11rem);font-weight:900;color:#fff;line-height:.85;letter-spacing:-.02em}
   .lockup .f{color:var(--blue)}
@@ -166,6 +197,11 @@
   .topbar .logo{font-weight:900;font-size:.95rem;letter-spacing:.04em}
   .topbar .logo b{color:var(--blue)}
   .topbar .meta{opacity:.6}
+  .topbar .dl-link{
+    color:#fff;text-decoration:none;font-weight:700;letter-spacing:.1em;font-size:.7rem;
+    padding:.3rem .7rem;border:1px solid rgba(255,255,255,.35);
+  }
+  .topbar .dl-link:hover{background:#fff;color:var(--ink)}
 
   @media(max-width:640px){
     .nav{display:none}
@@ -178,12 +214,14 @@
 <div class="topbar">
   <div class="logo">MALA <b>FAMA</b></div>
   <div class="meta">Propuesta de rediseño · Marzo 2026</div>
+  <a class="dl-link" href="Presentacion-Web-MalaFama.pdf" target="_blank">↓ PDF</a>
 </div>
 
 <nav class="nav" aria-hidden="true">
   <a href="#s1"></a><a href="#s2"></a><a href="#s3"></a><a href="#s4"></a>
   <a href="#s5"></a><a href="#s6"></a><a href="#s7"></a><a href="#s8"></a>
   <a href="#s9"></a><a href="#s10"></a><a href="#s11"></a><a href="#s12"></a>
+  <a href="#s13"></a><a href="#s14"></a><a href="#s15"></a><a href="#s16"></a>
 </nav>
 
 <!-- 1 — PORTADA -->
@@ -192,9 +230,14 @@
   <div style="margin:auto 0;width:100%">
     <h1 class="t">LA WEB DE<br><span class="b">MALA FAMA</span></h1>
     <span class="accent"></span>
-    <p class="sub">Rediseño creativo: de Shopify genérico a una web custom con el carácter de la cervecería.</p>
+    <p class="sub">Rediseño creativo: de LUNA y plataformas SaaS genéricas a una web custom con el carácter de la cervecería. Incluye 3 meses de mantenimiento sin costo.</p>
+    <div class="downloads">
+      <a class="dl-btn primary" href="Presentacion-Web-MalaFama.pdf" target="_blank">↓ Presentación completa (PDF)</a>
+      <a class="dl-btn" href="Presentacion-Web-MalaFama-MOBILE.pdf" target="_blank">↓ Versión mobile</a>
+      <a class="dl-btn" href="Manual-de-Marca-MalaFama.pdf" target="_blank">↓ Manual de Marca</a>
+    </div>
   </div>
-  <div class="s-foot"><span>cervezamalafama.com</span><span>v1.0</span></div>
+  <div class="s-foot"><span>cervezamalafama.com</span><span>v1.1</span></div>
 </section>
 
 <!-- 2 — INDICE -->
@@ -207,12 +250,17 @@
     <div class="index-row"><span class="n">02</span><span class="l">Por qué rediseñarla</span></div>
     <div class="index-row"><span class="n">03</span><span class="l">Lo que tiene la web</span></div>
     <div class="index-row"><span class="n">04</span><span class="l">Tienda online completa</span></div>
-    <div class="index-row"><span class="n">05</span><span class="l">Experiencia mobile</span></div>
-    <div class="index-row"><span class="n">06</span><span class="l">Reservas de mesa</span></div>
-    <div class="index-row"><span class="n">07</span><span class="l">Panel de administración</span></div>
-    <div class="index-row"><span class="n">08</span><span class="l">Performance & SEO</span></div>
-    <div class="index-row"><span class="n">09</span><span class="l">Qué les va a generar</span></div>
-    <div class="index-row"><span class="n">10</span><span class="l">Próximos pasos</span></div>
+    <div class="index-row"><span class="n">05</span><span class="l">Productos inteligentes</span></div>
+    <div class="index-row"><span class="n">06</span><span class="l">Merch &amp; apparel</span></div>
+    <div class="index-row"><span class="n">07</span><span class="l">Armá tu pack</span></div>
+    <div class="index-row"><span class="n">08</span><span class="l">Beer Passport</span></div>
+    <div class="index-row"><span class="n">09</span><span class="l">Experiencia mobile</span></div>
+    <div class="index-row"><span class="n">10</span><span class="l">Reservas de mesa</span></div>
+    <div class="index-row"><span class="n">11</span><span class="l">Panel admin — gestión diaria</span></div>
+    <div class="index-row"><span class="n">12</span><span class="l">Panel admin — inteligencia de negocio</span></div>
+    <div class="index-row"><span class="n">13</span><span class="l">Performance &amp; SEO</span></div>
+    <div class="index-row"><span class="n">14</span><span class="l">Qué les va a generar</span></div>
+    <div class="index-row"><span class="n">15</span><span class="l">Costos &amp; próximos pasos</span></div>
   </div>
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
@@ -224,12 +272,12 @@
   <span class="accent"></span>
   <div class="grid2">
     <div>
-      <p class="body">Mala Fama ya tiene web — montada sobre un template de Shopify. Funciona, pero carga lenta, se ve como cualquier otra tienda y no refleja el carácter de la cervecería. Pagan una mensualidad por algo genérico.</p>
-      <p class="body">La idea fue clara: una cervecería con tanto estilo merece una web a la altura. Rediseño completo, código propio, sin templates, sin comisiones — la web como una extensión de la marca.</p>
+      <p class="body">Mala Fama ya tiene web — construida sobre LUNA (luna.com.uy), una plataforma SaaS uruguaya. Funciona, pero usa un template genérico, carga lento y no refleja el carácter de la cervecería. Pagan mensualidad por algo que podría ser de cualquier marca.</p>
+      <p class="body">La idea fue clara: una cervecería con tanto estilo merece una web a la altura. Rediseño completo, código propio, sin templates, sin mensualidad de plataforma — la web como una extensión de la marca.</p>
     </div>
     <div class="compare">
       <div class="col bad">
-        <span class="lbl">Shopify actual</span>
+        <span class="lbl">LUNA / SaaS actual</span>
         <ul>
           <li>Template genérico</li>
           <li>Carga lenta en celular</li>
@@ -241,11 +289,11 @@
       <div class="col good">
         <span class="lbl">Web rediseñada</span>
         <ul>
-          <li>Diseño custom con la estética Mala Fama</li>
+          <li>Diseño custom con estética Mala Fama</li>
           <li>Rápida — &lt;2s en 4G</li>
           <li>Código propio, sin mensualidad</li>
           <li>Gestos tipo app nativa</li>
-          <li>Cero comisión</li>
+          <li>Cero comisión sobre ventas</li>
         </ul>
       </div>
     </div>
@@ -259,7 +307,7 @@
   <h2 class="t" style="margin-top:2.5rem">POR QUÉ<br><span class="b">REDISEÑARLA</span></h2>
   <span class="accent"></span>
   <div class="grid2">
-    <p class="body">La cerveza tiene carácter: sin filtrar, sin pasteurizar, artesanal, con una identidad visual fuerte. Pero esa identidad hoy se diluye en una tienda de Shopify. Un rediseño no es un capricho estético — es un canal de venta que comunica lo que la marca ya es: una cerveza con alma, una experiencia, no un producto más en una grilla.</p>
+    <p class="body">La cerveza tiene carácter: sin filtrar, sin pasteurizar, artesanal, con una identidad visual fuerte. Pero esa identidad hoy se diluye en una tienda de LUNA. Un rediseño no es un capricho estético — es un canal de venta que comunica lo que la marca ya es: una cerveza con alma, una experiencia, no un producto más en una grilla.</p>
     <div>
       <div class="card" style="margin-bottom:1rem">
         <h3>Marca</h3>
@@ -267,11 +315,11 @@
       </div>
       <div class="card" style="margin-bottom:1rem">
         <h3>Velocidad</h3>
-        <p>Carga en menos de 2s. Shopify con apps arrastra entre 4 y 6s en 4G.</p>
+        <p>Carga en menos de 2s. LUNA con apps arrastra entre 4 y 6s en 4G.</p>
       </div>
       <div class="card">
         <h3>Control</h3>
-        <p>Sin mensualidad, sin comisiones, sin límites del plan. Código propio.</p>
+        <p>Sin mensualidad de plataforma, sin comisión propia, sin límites del plan. Código propio.</p>
       </div>
     </div>
   </div>
@@ -310,9 +358,87 @@
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
 
-<!-- 7 — EXPERIENCIA MOBILE -->
-<section class="slide dark" id="s7">
-  <div class="s-head"><span>05 · Experiencia mobile</span><span>Cervecería Mala Fama</span></div>
+<!-- 7 — PRODUCTOS INTELIGENTES -->
+<section class="slide off" id="s7">
+  <div class="s-head"><span>05 · Productos inteligentes</span><span>Cervecería Mala Fama</span></div>
+  <h2 class="t" style="margin-top:2.5rem">PRODUCTOS<br><span class="b">INTELIGENTES</span></h2>
+  <span class="accent"></span>
+  <p class="body" style="max-width:70ch">Cada producto es una ficha viva: ilustración propia, estilo, IBU, graduación y stock en tiempo real. Si una cerveza se agota, se oculta automáticamente de las recomendaciones — nadie termina en una página de "sin stock". Si la cantidad no alcanza, se muestra el número exacto disponible.</p>
+  <div class="grid4">
+    <div class="card compact"><h3>Ilustraciones</h3><p>Cada lata con su ilustración propia, no fotos de stock.</p></div>
+    <div class="card compact"><h3>Stock en vivo</h3><p>El stock se reserva al añadir al carrito. Si no compran, se libera.</p></div>
+    <div class="card compact"><h3>Alerta de cupo</h3><p>"Solo quedan 3 unidades de X" — sin enviar al error.</p></div>
+    <div class="card compact"><h3>Sin recos vacías</h3><p>Productos sin stock no aparecen en "te podría interesar".</p></div>
+  </div>
+  <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
+</section>
+
+<!-- 8 — MERCH & APPAREL -->
+<section class="slide dark" id="s8">
+  <div class="s-head"><span>06 · Merch &amp; Apparel</span><span>Cervecería Mala Fama</span></div>
+  <h2 class="t" style="margin-top:2.5rem">MERCH<br><span class="b">& APPAREL</span></h2>
+  <span class="accent"></span>
+  <p class="body" style="max-width:70ch">La cervecería es marca antes que producto. La tienda tiene categoría propia para merch: remeras, gorras, vasos, posavasos, riñoneras, stickers. Cada uno con su ficha, galería de fotos y variantes de talle o color. El merch vende marca tanto como el producto.</p>
+  <div class="grid3">
+    <div class="card"><h3>Remeras</h3><p>Variantes de talle (S, M, L, XL) y color. Galería con vista frontal y trasera.</p></div>
+    <div class="card"><h3>Gorras</h3><p>Trucker y cerradas, con el logo bordado.</p></div>
+    <div class="card"><h3>Vasos 400ml</h3><p>Vaso oficial Mala Fama. También como regalo dentro del pack.</p></div>
+    <div class="card"><h3>Posavasos</h3><p>Set de 4, con diferentes diseños de la familia de cervezas.</p></div>
+    <div class="card"><h3>Riñoneras</h3><p>Riñonera urbana con logo bordado y bolsillo interno.</p></div>
+    <div class="card"><h3>Stickers</h3><p>Pack de 10 stickers troquelados. Regalo con cada compra + promo.</p></div>
+  </div>
+  <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
+</section>
+
+<!-- 9 — ARMÁ TU PACK -->
+<section class="slide off" id="s9">
+  <div class="s-head"><span>07 · Armá tu pack</span><span>Cervecería Mala Fama</span></div>
+  <h2 class="t" style="margin-top:2.5rem">ARMÁ<br><span class="b">TU PACK</span></h2>
+  <span class="accent"></span>
+  <p class="body" style="max-width:70ch">El pack de 3 cervezas + vaso 400ml ya existía, pero obligaba al cliente a escribir a mano cuáles cervezas quería en el campo de observaciones. Cada pedido era un ida y vuelta. Ahora el cliente ve una grilla visual de todas las cervezas disponibles, tap-tap-tap, y el contador avanza 0/3 → 3/3.</p>
+  <div class="pack-ba">
+    <div class="box before">
+      <span class="lbl">Antes · LUNA</span>
+      <h4>SE ANOTABA<br>A MANO</h4>
+      <p>El cliente escribía en observaciones cuáles cervezas quería. El staff transcribía al preparar el pedido. Errores, olvidos, llamadas de confirmación y tiempo perdido.</p>
+    </div>
+    <div class="box after">
+      <span class="lbl">Ahora · Web custom</span>
+      <h4>CLICK<br>Y LISTO</h4>
+      <p>Grilla visual de cervezas disponibles. El cliente tapea 3 latas, el contador va 0/3 → 3/3, y cada selección descuenta del stock individual. Zero duplicación de inventario, zero errores.</p>
+    </div>
+  </div>
+  <div class="pack-bottom">El pack incluye 3 latas + vaso 400ml · desde $U 790 ($U 672 con Itaú)</div>
+  <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
+</section>
+
+<!-- 10 — BEER PASSPORT -->
+<section class="slide blue" id="s10">
+  <div class="s-head"><span>08 · Beer Passport</span><span>Cervecería Mala Fama</span></div>
+  <h2 class="t" style="margin-top:2.5rem;color:#fff">BEER<br>PASSPORT</h2>
+  <span class="accent" style="background:#fff"></span>
+  <div class="grid2">
+    <div>
+      <p class="body">Un programa de fidelidad con alma de cervecería artesanal. El cliente tiene un "pasaporte" con las 8 cervezas de la familia Mala Fama. Cada vez que prueba una, consigue un sello. Al completar el pasaporte, se gana una cerveza gratis en su próxima compra.</p>
+      <p class="body">La regla es simple y firme: <strong>la cerveza gratis no cae del cielo.</strong> Para reclamarla hay que tener el pasaporte completo Y una compra adicional mínima de $U 500. Fideliza sin regalar.</p>
+    </div>
+    <div>
+      <span class="list-lbl">Cómo funciona</span>
+      <ul class="list plus">
+        <li>El cliente se registra en la web — su pasaporte arranca vacío.</li>
+        <li>Cada vez que compra una nueva cerveza de la familia, suma un sello.</li>
+        <li>Los 8 sellos se visualizan en su cuenta.</li>
+        <li>Al completar, se desbloquea la cerveza gratis en el próximo pedido &gt; $U 500.</li>
+        <li>El admin puede ver quién completó el pasaporte y quién reclamó la recompensa.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
+</section>
+
+<!-- 11 — EXPERIENCIA MOBILE -->
+<section class="slide dark" id="s11">
+  <div class="s-head"><span>09 · Experiencia mobile</span><span>Cervecería Mala Fama</span></div>
   <h2 class="t" style="margin-top:2.5rem">SE SIENTE<br><span class="b">COMO UNA APP</span></h2>
   <span class="accent"></span>
   <p class="body" style="max-width:70ch">El 80% de los visitantes entran desde el celular. Por eso la web no solo se adapta: se comporta como una app nativa. Gestos, transiciones, feedback háptico y un hero full-viewport que pone al local en primer plano. Sin descargar nada.</p>
@@ -329,9 +455,9 @@
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
 
-<!-- 8 — RESERVAS -->
-<section class="slide off" id="s8">
-  <div class="s-head"><span>06 · Reservas de mesa</span><span>Cervecería Mala Fama</span></div>
+<!-- 12 — RESERVAS -->
+<section class="slide off" id="s12">
+  <div class="s-head"><span>10 · Reservas de mesa</span><span>Cervecería Mala Fama</span></div>
   <h2 class="t" style="margin-top:2.5rem">RESERVAS<br><span class="b">SIN MENSAJES</span></h2>
   <span class="accent"></span>
   <div class="grid2">
@@ -352,28 +478,46 @@
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
 
-<!-- 9 — ADMIN -->
-<section class="slide off" id="s9">
-  <div class="s-head"><span>07 · Panel admin</span><span>Cervecería Mala Fama</span></div>
+<!-- 13 — PANEL ADMIN · GESTIÓN DIARIA -->
+<section class="slide off" id="s13">
+  <div class="s-head"><span>11 · Panel admin — gestión diaria</span><span>Cervecería Mala Fama</span></div>
   <h2 class="t" style="margin-top:2.5rem">CONTROL<br><span class="b">TOTAL</span></h2>
   <span class="accent"></span>
-  <div class="grid2">
-    <p class="body">Un panel privado para que ustedes gestionen todo sin depender de nadie. Edición de productos, stock y precios en vivo, visualización de pedidos, clientes y reservas. El equipo entra con su usuario y tiene la web en sus manos.</p>
-    <ul class="list plus">
-      <li><strong style="min-width:120px;display:inline-block;color:var(--blue)">Productos</strong> Alta/baja, stock, precios editables en tiempo real.</li>
-      <li><strong style="min-width:120px;display:inline-block;color:var(--blue)">Pedidos</strong> Lista con estado, cliente y envío — exportable.</li>
-      <li><strong style="min-width:120px;display:inline-block;color:var(--blue)">Clientes</strong> Base propia con historial de compras.</li>
-      <li><strong style="min-width:120px;display:inline-block;color:var(--blue)">Reservas</strong> Calendario por local, cupos y horarios.</li>
-      <li><strong style="min-width:120px;display:inline-block;color:var(--blue)">Cupones</strong> Códigos con reglas (monto mínimo, caducidad).</li>
-      <li><strong style="min-width:120px;display:inline-block;color:var(--blue)">Informes</strong> Ventas, productos top, ticket promedio.</li>
-    </ul>
+  <p class="body" style="max-width:70ch">Un panel privado — <strong>/admin</strong> — para que el equipo gestione la web entera sin depender de programadores. Productos, stock, pedidos, clientes, reservas, cupos, precios, estadísticas. Todo en un solo tablero, con login de empleado.</p>
+  <div class="grid3">
+    <div class="card compact"><h3>Productos</h3><p>Alta, baja, edición de nombre, descripción, precio, ilustración y ficha técnica en vivo. Archivo de productos discontinuados para históricos.</p></div>
+    <div class="card compact"><h3>Stock en vivo</h3><p>Inventario por unidad. El stock se reserva al agregar al carrito y se libera si no compran. Sincronía real entre web y depósito.</p></div>
+    <div class="card compact"><h3>Subir precios</h3><p>Ajuste masivo por porcentaje — ideal cuando sube el lúpulo o el dólar. Doble confirmación para evitar errores, preview antes de aplicar.</p></div>
+    <div class="card compact"><h3>Pedidos</h3><p>Flujo: Nuevo → Confirmado → Preparando → Entregado a UES (con código de tracking) → Entregado. Cada transición dispara email automático.</p></div>
+    <div class="card compact"><h3>Emails auto</h3><p>Confirmación de pedido, aviso de preparación, aviso de envío con link al tracking de UES, confirmación de entrega. Cero mensajes a mano.</p></div>
+    <div class="card compact"><h3>Clientes</h3><p>Base propia con historial de compras, total gastado, productos favoritos y última reserva. Info que LUNA y MercadoLibre no comparten.</p></div>
+    <div class="card compact"><h3>Reservas</h3><p>Vista calendario por local. Estados (confirmada, cancelada, completada). Cancelación manual libera cupos al instante.</p></div>
+    <div class="card compact"><h3>Cupos</h3><p>Capacidad base editable por local (MVD 200 / PDE 150) + ajuste manual diario para restar mesas de WhatsApp o presenciales. Fórmula en vivo.</p></div>
+    <div class="card compact"><h3>Passport</h3><p>Tracking de sellos del Beer Passport. El admin ve quién completó el pasaporte y quién reclamó la cerveza gratis.</p></div>
   </div>
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
 
-<!-- 10 — PERFORMANCE -->
-<section class="slide dark" id="s10">
-  <div class="s-head"><span>08 · Performance & SEO</span><span>Cervecería Mala Fama</span></div>
+<!-- 14 — PANEL ADMIN · INTELIGENCIA DE NEGOCIO -->
+<section class="slide dark" id="s14">
+  <div class="s-head"><span>12 · Panel admin — inteligencia de negocio</span><span>Cervecería Mala Fama</span></div>
+  <h2 class="t" style="margin-top:2.5rem">QUÉ ESTÁ<br><span class="b">PASANDO HOY</span></h2>
+  <span class="accent"></span>
+  <p class="body" style="max-width:70ch">Más que un gestor de productos: un tablero de inteligencia que transforma cada click en información útil. Los datos dejan de estar enterrados en WhatsApp y Excel, y empiezan a guiar las decisiones del negocio.</p>
+  <div class="grid3">
+    <div class="card compact"><h3>Ventas hoy</h3><p>Facturación del día, semana y mes con comparativo al período anterior. Gráfico de barras por día.</p></div>
+    <div class="card compact"><h3>Top productos</h3><p>Ranking de cervezas y merch por unidades y facturación. Detecta lo que rinde y lo que no.</p></div>
+    <div class="card compact"><h3>Ticket promedio</h3><p>Valor promedio del pedido y cantidad de productos por compra. Útil para medir el efecto de los packs.</p></div>
+    <div class="card compact"><h3>Origen del tráfico</h3><p>De dónde vienen los clientes: Instagram, Google, directo, QR del local. Mide qué campaña genera ventas.</p></div>
+    <div class="card compact"><h3>Conversión</h3><p>Visitas vs. pedidos vs. abandonos de carrito. Identifica fugas en el embudo de compra.</p></div>
+    <div class="card compact"><h3>Reservas por local</h3><p>Ocupación promedio MVD vs PDE, horarios más pedidos, días pico. Base para decidir cupos y horarios.</p></div>
+  </div>
+  <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
+</section>
+
+<!-- 15 — PERFORMANCE -->
+<section class="slide dark" id="s15">
+  <div class="s-head"><span>13 · Performance &amp; SEO</span><span>Cervecería Mala Fama</span></div>
   <h2 class="t" style="margin-top:2.5rem">RÁPIDA,<br><span class="b">LIVIANA Y</span><br>GOOGLEABLE</h2>
   <span class="accent"></span>
   <div class="grid2">
@@ -388,9 +532,9 @@
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
 
-<!-- 11 — ROI -->
-<section class="slide blue" id="s11">
-  <div class="s-head"><span>09 · Lo que genera</span><span>Cervecería Mala Fama</span></div>
+<!-- 16 — ROI -->
+<section class="slide blue" id="s16">
+  <div class="s-head"><span>14 · Lo que genera</span><span>Cervecería Mala Fama</span></div>
   <h2 class="t" style="margin-top:2.5rem;color:#fff">LO QUE LES VA<br>A GENERAR</h2>
   <span class="accent" style="background:#fff"></span>
   <div class="grid3">
@@ -404,12 +548,12 @@
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
 
-<!-- 12 — PROXIMOS PASOS + CONTACTO -->
-<section class="slide off" id="s12">
-  <div class="s-head"><span>10 · Próximos pasos</span><span>Cervecería Mala Fama</span></div>
+<!-- 17 — PROXIMOS PASOS + CONTACTO -->
+<section class="slide off">
+  <div class="s-head"><span>15 · Próximos pasos</span><span>Cervecería Mala Fama</span></div>
   <h2 class="t" style="margin-top:2.5rem">PRÓXIMOS<br><span class="b">PASOS</span></h2>
   <span class="accent"></span>
-  <p class="body" style="max-width:70ch">La web rediseñada ya está construida, desplegada y funcionando. Lo que queda es migrar del Shopify actual, conectar el dominio y salir. Cronograma sugerido:</p>
+  <p class="body" style="max-width:70ch">La web rediseñada ya está construida, desplegada y funcionando. Lo que queda es migrar del LUNA actual, conectar el dominio y salir. Cronograma sugerido:</p>
   <div class="steps">
     <div class="step"><div class="n">Semana 1</div><h4>Aprobación</h4><p>Revisión final del equipo, feedback y luz verde.</p></div>
     <div class="step"><div class="n">Semana 2</div><h4>Contenido</h4><p>Carga real de productos, fotos definitivas y textos.</p></div>
@@ -420,11 +564,15 @@
     <h3 class="t" style="font-size:clamp(1.8rem,4vw,3rem)">LA WEB ESTÁ <span class="b">LISTA.</span></h3>
     <p style="color:var(--gray);margin-top:.5rem;font-weight:500">Sólo falta encenderla.</p>
   </div>
+  <div class="downloads" style="margin-top:2rem;justify-content:flex-start">
+    <a class="dl-btn primary" href="Presentacion-Web-MalaFama.pdf" target="_blank">↓ Presentación completa (PDF)</a>
+    <a class="dl-btn" href="Manual-de-Marca-MalaFama.pdf" target="_blank">↓ Manual de Marca</a>
+  </div>
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
 
-<!-- 13 — CIERRE -->
-<section class="slide dark" id="s13">
+<!-- 18 — CIERRE -->
+<section class="slide dark">
   <div class="s-head"><span>Contacto</span><span>Cervecería Mala Fama</span></div>
   <div class="lockup">
     <div class="m">MALA<br><span class="f">FAMA</span></div>
@@ -436,7 +584,7 @@
     <div><span>Email</span>ventas@cervezamalafama.com</div>
     <div><span>Instagram</span>@cerveceria_malafama</div>
   </div>
-  <div class="s-foot"><span>Propuesta de rediseño · Marzo 2026 · v1.0</span><span>Cervecería Mala Fama</span></div>
+  <div class="s-foot"><span>Propuesta de rediseño · Marzo 2026 · v1.1</span><span>Cervecería Mala Fama</span></div>
 </section>
 
 <script>
