@@ -154,6 +154,29 @@
   .gest h5{font-weight:900;font-size:1rem;color:var(--blue);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.3rem}
   .gest p{font-size:.82rem;opacity:.78;line-height:1.4}
 
+  /* inversion slide */
+  .inv-wrap{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem}
+  @media(min-width:900px){.inv-wrap{grid-template-columns:1fr 1fr;gap:2.5rem}}
+  .inv-price{padding:2rem 0}
+  .inv-price .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.15em;font-size:.78rem;color:var(--gray);margin-bottom:.6rem;display:block}
+  .inv-price .big{font-weight:900;font-size:clamp(4.5rem,10vw,7.5rem);line-height:.9;color:var(--blue)}
+  .inv-price .sub{margin-top:1rem;color:var(--gray);font-weight:500;font-size:1.05rem}
+  .pay-card{padding:1.5rem 1.75rem;border-left:4px solid var(--blue);background:rgba(0,0,0,.04);margin-bottom:1rem}
+  .pay-card.solid{background:var(--blue);color:#fff;border-left-color:#fff}
+  .pay-card .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;color:var(--blue);display:block;margin-bottom:.3rem}
+  .pay-card.solid .lbl{color:rgba(255,255,255,.75)}
+  .pay-card .amount{font-weight:900;font-size:2.6rem;line-height:1;display:flex;align-items:baseline;gap:.75rem}
+  .pay-card .amount .pct{font-size:.85rem;font-weight:700;color:var(--gray);letter-spacing:.1em}
+  .pay-card.solid .amount{color:#fff}
+  .pay-card.solid .amount .pct{color:rgba(255,255,255,.75)}
+  .pay-card p{margin-top:.75rem;font-size:.95rem;line-height:1.5;opacity:.9}
+  .inv-includes{margin-top:2rem;padding:1.25rem 1.5rem;background:var(--ink);color:#fff}
+  .inv-includes .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:rgba(255,255,255,.65);display:block;margin-bottom:.75rem}
+  .inv-inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem .8rem}
+  @media(min-width:700px){.inv-inc-grid{grid-template-columns:repeat(4,1fr)}}
+  .inv-inc-grid span{font-weight:500;font-size:.92rem;display:flex;gap:.5rem;align-items:baseline}
+  .inv-inc-grid span::before{content:"→";color:var(--blue);font-weight:900}
+
   /* pack before/after */
   .pack-ba{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
   @media(min-width:800px){.pack-ba{grid-template-columns:1fr 1fr}}
@@ -260,7 +283,9 @@
     <div class="index-row"><span class="n">12</span><span class="l">Panel admin — inteligencia de negocio</span></div>
     <div class="index-row"><span class="n">13</span><span class="l">Performance &amp; SEO</span></div>
     <div class="index-row"><span class="n">14</span><span class="l">Qué les va a generar</span></div>
-    <div class="index-row"><span class="n">15</span><span class="l">Costos &amp; próximos pasos</span></div>
+    <div class="index-row"><span class="n">15</span><span class="l">La inversión del proyecto</span></div>
+    <div class="index-row"><span class="n">16</span><span class="l">Costos operativos</span></div>
+    <div class="index-row"><span class="n">17</span><span class="l">Próximos pasos</span></div>
   </div>
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
@@ -548,9 +573,50 @@
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
 
-<!-- 17 — PROXIMOS PASOS + CONTACTO -->
+<!-- 17 — INVERSION DEL PROYECTO -->
 <section class="slide off">
-  <div class="s-head"><span>15 · Próximos pasos</span><span>Cervecería Mala Fama</span></div>
+  <div class="s-head"><span>15 · La inversión del proyecto</span><span>Cervecería Mala Fama</span></div>
+  <h2 class="t" style="margin-top:2.5rem">LA<br><span class="b">INVERSIÓN</span></h2>
+  <span class="accent"></span>
+  <p class="body" style="max-width:70ch">El proyecto completo — diseño, desarrollo, tienda, reservas, panel admin, integraciones de pago, emails automáticos, carga de productos reales y publicación en internet — tiene un único precio cerrado. Sin sorpresas ni extras escondidos.</p>
+  <div class="inv-wrap">
+    <div class="inv-price">
+      <span class="lbl">Precio del proyecto · llave en mano</span>
+      <div class="big">USD 700</div>
+      <div class="sub">Pago en 2 cuotas · sin mensualidad de plataforma.</div>
+    </div>
+    <div>
+      <div class="pay-card">
+        <span class="lbl">Pago 1 · Seña</span>
+        <div class="amount">USD 350 <span class="pct">50%</span></div>
+        <p>Al aprobar el diseño final y dar luz verde para arrancar.</p>
+      </div>
+      <div class="pay-card solid">
+        <span class="lbl">Pago 2 · Entrega</span>
+        <div class="amount">USD 350 <span class="pct">50%</span></div>
+        <p>Al entregar la web con sus productos cargados y publicada en internet.</p>
+      </div>
+    </div>
+  </div>
+  <div class="inv-includes">
+    <span class="lbl">Qué incluye el proyecto</span>
+    <div class="inv-inc-grid">
+      <span>Diseño custom</span>
+      <span>Tienda completa</span>
+      <span>Reservas + cupos</span>
+      <span>Panel admin</span>
+      <span>Emails automáticos</span>
+      <span>Carga de productos</span>
+      <span>Publicación &amp; dominio</span>
+      <span>3 meses de mantenimiento</span>
+    </div>
+  </div>
+  <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
+</section>
+
+<!-- 18 — PROXIMOS PASOS + CONTACTO -->
+<section class="slide off">
+  <div class="s-head"><span>16 · Próximos pasos</span><span>Cervecería Mala Fama</span></div>
   <h2 class="t" style="margin-top:2.5rem">PRÓXIMOS<br><span class="b">PASOS</span></h2>
   <span class="accent"></span>
   <p class="body" style="max-width:70ch">La web rediseñada ya está construida, desplegada y funcionando. Lo que queda es migrar del LUNA actual, conectar el dominio y salir. Cronograma sugerido:</p>
