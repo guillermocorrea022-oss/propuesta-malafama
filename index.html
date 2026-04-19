@@ -155,12 +155,13 @@
   .gest p{font-size:.82rem;opacity:.78;line-height:1.4}
 
   /* inversion slide */
-  .inv-wrap{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem}
-  @media(min-width:900px){.inv-wrap{grid-template-columns:1fr 1fr;gap:2.5rem}}
-  .inv-price{padding:2rem 0}
+  .inv-wrap{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:2.5rem;align-items:start}
+  @media(min-width:900px){.inv-wrap{grid-template-columns:1.1fr .9fr;gap:3rem}}
+  .inv-price{padding:.5rem 0}
   .inv-price .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.15em;font-size:.78rem;color:var(--gray);margin-bottom:.6rem;display:block}
   .inv-price .big{font-weight:900;font-size:clamp(4.5rem,10vw,7.5rem);line-height:.9;color:var(--blue)}
   .inv-price .sub{margin-top:1rem;color:var(--gray);font-weight:500;font-size:1.05rem}
+  .inv-price .desc{margin-top:1.75rem;font-size:1rem;line-height:1.5;font-weight:400;max-width:46ch;opacity:.9}
   .pay-card{padding:1.5rem 1.75rem;border-left:4px solid var(--blue);background:rgba(0,0,0,.04);margin-bottom:1rem}
   .pay-card.solid{background:var(--blue);color:#fff;border-left-color:#fff}
   .pay-card .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;color:var(--blue);display:block;margin-bottom:.3rem}
@@ -170,7 +171,19 @@
   .pay-card.solid .amount{color:#fff}
   .pay-card.solid .amount .pct{color:rgba(255,255,255,.75)}
   .pay-card p{margin-top:.75rem;font-size:.95rem;line-height:1.5;opacity:.9}
-  .inv-includes{margin-top:2rem;padding:1.25rem 1.5rem;background:var(--ink);color:#fff}
+  .inv-monthly{margin-top:2.5rem;padding:1.5rem 1.75rem;border-top:3px solid var(--blue);background:rgba(0,0,0,.03)}
+  .inv-monthly .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:var(--blue);display:block;margin-bottom:.25rem}
+  .inv-monthly .sub{font-size:.9rem;color:var(--gray);margin-bottom:1rem;font-weight:500}
+  .inv-monthly-grid{display:grid;grid-template-columns:1fr;gap:.5rem 1.5rem}
+  @media(min-width:700px){.inv-monthly-grid{grid-template-columns:1fr 1fr}}
+  .inv-monthly-row{display:flex;justify-content:space-between;padding:.45rem 0;border-bottom:1px solid var(--line);font-weight:500;font-size:.95rem}
+  .inv-monthly-row .p{color:var(--blue);font-weight:700}
+  .inv-monthly-total{margin-top:.75rem;display:flex;justify-content:space-between;padding:.75rem 1rem;background:var(--ink);color:#fff}
+  .inv-monthly-total .lbl{color:#fff;font-weight:900;letter-spacing:.1em;font-size:.95rem;margin:0}
+  .inv-monthly-total .p{color:#fff;font-weight:900;font-size:1.05rem;letter-spacing:.05em}
+  .inv-monthly .saving{margin-top:.5rem;font-size:.85rem;color:var(--gray);font-style:italic}
+
+  .inv-includes{margin-top:2.5rem;padding:1.25rem 1.5rem;background:var(--ink);color:#fff}
   .inv-includes .lbl{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:rgba(255,255,255,.65);display:block;margin-bottom:.75rem}
   .inv-inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem .8rem}
   @media(min-width:700px){.inv-inc-grid{grid-template-columns:repeat(4,1fr)}}
@@ -237,7 +250,6 @@
 <div class="topbar">
   <div class="logo">MALA <b>FAMA</b></div>
   <div class="meta">Propuesta de rediseño · Marzo 2026</div>
-  <a class="dl-link" href="Presentacion-Web-MalaFama.pdf" target="_blank">↓ PDF</a>
 </div>
 
 <nav class="nav" aria-hidden="true">
@@ -255,9 +267,7 @@
     <span class="accent"></span>
     <p class="sub">Rediseño creativo: de LUNA y plataformas SaaS genéricas a una web custom con el carácter de la cervecería. Incluye 3 meses de mantenimiento sin costo.</p>
     <div class="downloads">
-      <a class="dl-btn primary" href="Presentacion-Web-MalaFama.pdf" target="_blank">↓ Presentación completa (PDF)</a>
-      <a class="dl-btn" href="Presentacion-Web-MalaFama-MOBILE.pdf" target="_blank">↓ Versión mobile</a>
-      <a class="dl-btn" href="Manual-de-Marca-MalaFama.pdf" target="_blank">↓ Manual de Marca</a>
+      <a class="dl-btn" href="Manual-de-Marca-MalaFama.pdf" target="_blank">↓ Manual de Marca (PDF)</a>
     </div>
   </div>
   <div class="s-foot"><span>cervezamalafama.com</span><span>v1.1</span></div>
@@ -283,9 +293,8 @@
     <div class="index-row"><span class="n">12</span><span class="l">Panel admin — inteligencia de negocio</span></div>
     <div class="index-row"><span class="n">13</span><span class="l">Performance &amp; SEO</span></div>
     <div class="index-row"><span class="n">14</span><span class="l">Qué les va a generar</span></div>
-    <div class="index-row"><span class="n">15</span><span class="l">La inversión del proyecto</span></div>
-    <div class="index-row"><span class="n">16</span><span class="l">Costos operativos</span></div>
-    <div class="index-row"><span class="n">17</span><span class="l">Próximos pasos</span></div>
+    <div class="index-row"><span class="n">15</span><span class="l">La inversión &amp; costos mensuales</span></div>
+    <div class="index-row"><span class="n">16</span><span class="l">Próximos pasos</span></div>
   </div>
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
@@ -578,26 +587,45 @@
   <div class="s-head"><span>15 · La inversión del proyecto</span><span>Cervecería Mala Fama</span></div>
   <h2 class="t" style="margin-top:2.5rem">LA<br><span class="b">INVERSIÓN</span></h2>
   <span class="accent"></span>
-  <p class="body" style="max-width:70ch">El proyecto completo — diseño, desarrollo, tienda, reservas, panel admin, integraciones de pago, emails automáticos, carga de productos reales y publicación en internet — tiene un único precio cerrado. Sin sorpresas ni extras escondidos.</p>
   <div class="inv-wrap">
     <div class="inv-price">
       <span class="lbl">Precio del proyecto · llave en mano</span>
       <div class="big">USD 700</div>
       <div class="sub">Pago en 2 cuotas · sin mensualidad de plataforma.</div>
+      <p class="desc">El proyecto completo — diseño, desarrollo, tienda, reservas, panel admin, integraciones de pago, emails automáticos, carga de productos reales y publicación en internet — tiene un único precio cerrado. Sin sorpresas ni extras escondidos.</p>
     </div>
     <div>
       <div class="pay-card">
         <span class="lbl">Pago 1 · Seña</span>
-        <div class="amount">USD 350 <span class="pct">50%</span></div>
+        <div class="amount">USD 280 <span class="pct">40%</span></div>
         <p>Al aprobar el diseño final y dar luz verde para arrancar.</p>
       </div>
       <div class="pay-card solid">
         <span class="lbl">Pago 2 · Entrega</span>
-        <div class="amount">USD 350 <span class="pct">50%</span></div>
+        <div class="amount">USD 420 <span class="pct">60%</span></div>
         <p>Al entregar la web con sus productos cargados y publicada en internet.</p>
       </div>
     </div>
   </div>
+
+  <div class="inv-monthly">
+    <span class="lbl">Costos mensuales · después del lanzamiento</span>
+    <p class="sub">Código propio, sin mensualidad de plataforma. Solo los costos operativos conocidos:</p>
+    <div class="inv-monthly-grid">
+      <div class="inv-monthly-row"><span>Hosting (Railway)</span><span class="p">USD 5 / mes</span></div>
+      <div class="inv-monthly-row"><span>Hosting (Render)</span><span class="p">USD 7 / mes</span></div>
+      <div class="inv-monthly-row"><span>Hosting (DigitalOcean)</span><span class="p">USD 12 / mes</span></div>
+      <div class="inv-monthly-row"><span>Dominio .com (anual)</span><span class="p">~USD 1.25 / mes</span></div>
+      <div class="inv-monthly-row"><span>MercadoPago (checkout)</span><span class="p">4.99% + IVA / venta</span></div>
+      <div class="inv-monthly-row"><span>Plexo (cotizar directo)</span><span class="p">~3-5% + IVA / venta</span></div>
+    </div>
+    <div class="inv-monthly-total">
+      <span class="lbl">Total fijo mensual</span>
+      <span class="p">USD 6-13 / mes</span>
+    </div>
+    <p class="saving">Ahorro de ~USD 20-55 / mes frente a una plataforma SaaS como LUNA o Shopify.</p>
+  </div>
+
   <div class="inv-includes">
     <span class="lbl">Qué incluye el proyecto</span>
     <div class="inv-inc-grid">
@@ -617,6 +645,7 @@
 <!-- 18 — PROXIMOS PASOS + CONTACTO -->
 <section class="slide off">
   <div class="s-head"><span>16 · Próximos pasos</span><span>Cervecería Mala Fama</span></div>
+  <!-- (Próximos pasos) -->
   <h2 class="t" style="margin-top:2.5rem">PRÓXIMOS<br><span class="b">PASOS</span></h2>
   <span class="accent"></span>
   <p class="body" style="max-width:70ch">La web rediseñada ya está construida, desplegada y funcionando. Lo que queda es migrar del LUNA actual, conectar el dominio y salir. Cronograma sugerido:</p>
@@ -631,8 +660,7 @@
     <p style="color:var(--gray);margin-top:.5rem;font-weight:500">Sólo falta encenderla.</p>
   </div>
   <div class="downloads" style="margin-top:2rem;justify-content:flex-start">
-    <a class="dl-btn primary" href="Presentacion-Web-MalaFama.pdf" target="_blank">↓ Presentación completa (PDF)</a>
-    <a class="dl-btn" href="Manual-de-Marca-MalaFama.pdf" target="_blank">↓ Manual de Marca</a>
+    <a class="dl-btn" href="Manual-de-Marca-MalaFama.pdf" target="_blank">↓ Manual de Marca (PDF)</a>
   </div>
   <div class="s-foot"><span>@cerveceria_malafama</span><span>www.cervezamalafama.com</span></div>
 </section>
